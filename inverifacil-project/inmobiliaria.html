@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyectos Inmobiliarios – RupuX</title>
+  <style>
+     header {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 20px 40px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #d1c4e9;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #6a1b9a;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      position: relative;
+      background-color: white;
+      width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Badge ajustado al lado derecho */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Cambiado de `left` a `right` */
+  background-color: #e74c3c;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  z-index: 2;
+}
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .meta {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 2px 6px;
+      background-color: #ddd;
+      border-radius: 4px;
+    }
+
+    .financed {
+      font-size: 14px;
+      margin: 4px 0;
+      color: #ff6600;
+      font-weight: bold;
+    }
+
+    .stats {
+      font-size: 13px;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: block;
+      margin-top: 16px;
+      text-align: center;
+      padding: 10px;
+      background-color: #6a1b9a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #58147a;
+    }
+
+  </style>
+</head>
+
+  <!-- Header / Navbar -->
+  <header>
+    <nav>
+      <div class="logo">RupuX</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="portafolio.html">Mi Portafolio</a>
+        <a href="etf.html">ETFs</a>
+        <a href="facturas.html">Facturas</a>
+        <a href="inmobiliaria.html">Inmobiliaria</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+<body>
+
+  <h1>Proyectos Inmobiliarios</h1>
+
+  <div class="projects-container">
+
+    <!-- Proyecto 1 -->
+    
+    <div class="card">
+      <div class="badge">52 días y 6:19:27 horas</div>
+      <img src="Image/Miami Ixora.png" alt="Miami Ixora">
+      <div class="card-content">
+        <div class="meta">Proyecto de Copahue – 18 años de exp.</div>
+        <div class="title">Miami Ixora</div>
+        <div class="tags">
+          <div class="tag">Desarrollos</div>
+          <div class="tag">Etapa 1/2</div>
+          <div class="tag">North Miami</div>
+        </div>
+        <div class="financed">12,2% Recaudado</div>
+        <div class="stats">
+          Rentabilidad estimada: <strong>24.4% anual</strong><br>
+          Plusvalía + USD: 24.4%<br>
+          Arriendo: 0.0%<br>
+          Riesgo: 🔳🔳⬜⬜⬜
+        </div>
+        <a href="#" class="btn">Ver más</a>
+      </div>
+    </div>
+ 
+    <!-- Proyecto 2 -->
+    <div class="card">
+      <div class="badge">46 días y 6:19:27 horas</div>
+      <img src="Image/Flipping.png">
+      <div class="card-content">
+        <div class="meta">Proyecto de Flipeame – 5 años de exp.</div>
+        <div class="title">Flipping Drugstore</div>
+        <div class="tags">
+          <div class="tag">Flipping's</div>
+          <div class="tag">Etapa 1/2</div>
+          <div class="tag">Providencia</div>
+        </div>
+        <div class="financed">28,3% Recaudado</div>
+        <div class="stats">
+          Rentabilidad estimada: <strong>17.9% anual</strong><br>
+          Plusvalía + UF: 17.9%<br>
+          Arriendo: 0.0%<br>
+          Riesgo: 🔳🔳🔳⬜⬜
+        </div>
+        <a href="#" class="btn">Ver más</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

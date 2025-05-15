@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle ETF - SPY</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: #004b91;
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .etf-data p {
+      margin: 0.4rem 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      margin-top: 2rem;
+    }
+       header {
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+      .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3b82f6;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #374151;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <div class="logo">RupuX</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="portafolio.html">Mi Portafolio</a>
+      <a href="inmobiliaria.html">Inmobiliaria</a>
+      <a href="facturas.html">Facturas</a>
+      <a href="etf.html"><strong>ETFs</strong></a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>SPDR S&P 500 ETF Trust (SPY)</h2>
+    <div class="etf-data">
+      <p><strong>Tipo:</strong> Renta Variable</p>
+      <p><strong>Descripción:</strong> Replica el desempeño del índice S&P 500. Uno de los ETF más líquidos del mundo.</p>
+      <p><strong>Rentabilidad YTD:</strong> +8.4%</p>
+      <p><strong>Comisión:</strong> 0.09% anual</p>
+   <!-- Widget Avanzado de TradingView -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_advanced_chart"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+    new TradingView.widget({
+      container_id: "tradingview_advanced_chart",
+      width: "100%",
+      height: 500,
+      symbol: "SPY", // Puedes cambiar el símbolo por otro activo
+      interval: "D",
+      timezone: "Etc/UTC",
+      theme: "light",
+      style: "1", // 1 = barras (cambia a 0 para líneas, 3 para velas, etc.)
+      locale: "es",
+      toolbar_bg: "#f1f3f6",
+      enable_publishing: false,
+      allow_symbol_change: true,
+      details: true,
+      hotlist: false,
+      calendar: false,
+      studies: [],
+      hide_side_toolbar: false,
+      withdateranges: true // Habilita los botones de rango de tiempo
+    });
+  </script>
+</div>
+
+
+</body>
+</html>

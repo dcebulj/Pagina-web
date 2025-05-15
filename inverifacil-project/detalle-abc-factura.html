@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facturas | RupuX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background-color: #0b3c5d;
+      padding: 16px;
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0e4a6e;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .tarjeta {
+      width: 320px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tarjeta header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: #f1f3f5;
+      font-size: 14px;
+    }
+
+    .tarjeta header img {
+      height: 30px;
+    }
+
+    .contenido {
+      padding: 16px;
+      flex: 1;
+    }
+
+    .entidad {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .monto {
+      font-size: 18px;
+      color: #3e3e3e;
+      margin-bottom: 6px;
+    }
+
+    .progreso-container {
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      height: 10px;
+      margin-bottom: 10px;
+    }
+
+    .progreso {
+      height: 10px;
+      background-color: #28a745;
+      width: 63%;
+      border-radius: 10px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 20px;
+      background-color: #e3e7ff;
+      color: #3b4cca;
+      margin: 10px 0;
+    }
+
+    .detalles {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin: 12px 0;
+    }
+
+    .detalles div {
+      text-align: center;
+    }
+
+    .historial {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .boton-inversion {
+      display: block;
+      width: 100%;
+      background-color: #9a2be5;
+      color: white;
+      text-align: center;
+      padding: 12px 0;
+      font-weight: bold;
+      font-size: 14px;
+      border: none;
+      border-radius: 0 0 12px 12px;
+      cursor: pointer;
+    }
+
+    .boton-inversion:hover {
+      background-color: #8220c3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Facturas Disponibles</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="portafolio.html">Mi Portafolio</a>
+    <a href="etfs.html">ETFs</a>
+    <a href="facturas.html">Facturas</a>
+    <a href="#">Crowdfunding</a>
+  </nav>
+
+  <section class="contenedor">
+
+    <!-- Tarjeta 1 -->
+    <div class="tarjeta">
+      <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Logo_TGR.png" alt="Logo TGR">
+        <span>Calificación 0,90 de 1,0</span>
+      </header>
+      <div class="contenido">
+        <div class="entidad">TESORERÍA GENERAL DE LA REPÚBLICA</div>
+        <div class="monto">$13.602.960</div>
+        <div class="progreso-container">
+          <div class="progreso"></div>
+        </div>
+        <small>63% financiada</small>
+        <div class="etiqueta">Anticipo RIESGO</div>
+        <div class="detalles">
+          <div><strong>13,25%</strong><br><small>Tasa anual</small></div>
+          <div><strong>8,54%</strong><br><small>TIR</small></div>
+          <div><strong>45 días</strong><br><small>Plazo</small></div>
+        </div>
+        <div class="historial">▼ Historial de cumplimiento</div>
+      </div>
+      <button class="boton-inversion" onclick="location.href='detalle-factura.html'">Invertir</button>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="tarjeta">
+      <header>
+        <img src="https://seeklogo.com/images/C/cumplo-logo-8842E60A94-seeklogo.com.png" alt="Logo Cumplo">
+        <span>Calificación 0,85 de 1,0</span>
+      </header>
+      <div class="contenido">
+        <div class="entidad">EMPRESA COMERCIAL ANDINA S.A.</div>
+        <div class="monto">$8.200.000</div>
+        <div class="progreso-container">
+          <div class="progreso" style="width: 80%"></div>
+        </div>
+        <small>80% financiada</small>
+        <div class="etiqueta">Factura Confirmada</div>
+        <div class="detalles">
+          <div><strong>12,75%</strong><br><small>Tasa anual</small></div>
+          <div><strong>9,00%</strong><br><small>TIR</small></div>
+          <div><strong>60 días</strong><br><small>Plazo</small></div>
+        </div>
+        <div class="historial">▼ Historial de cumplimiento</div>
+      </div>
+      <button class="boton-inversion" onclick="location.href='detalle-factura.html'">Invertir</button>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="tarjeta">
+      <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Logo_Codelco.svg/320px-Logo_Codelco.svg.png" alt="Logo Codelco">
+        <span>Calificación 0,98 de 1,0</span>
+      </header>
+      <div class="contenido">
+        <div class="entidad">CODELCO CHILE</div>
+        <div class="monto">$18.500.000</div>
+        <div class="progreso-container">
+          <div class="progreso" style="width: 45%"></div>
+        </div>
+        <small>45% financiada</small>
+        <div class="etiqueta">Anticipo sin recurso</div>
+        <div class="detalles">
+          <div><strong>10,00%</strong><br><small>Tasa anual</small></div>
+          <div><strong>7,50%</strong><br><small>TIR</small></div>
+          <div><strong>90 días</strong><br><small>Plazo</small></div>
+        </div>
+        <div class="historial">▼ Historial de cumplimiento</div>
+      </div>
+      <button class="boton-inversion" onclick="location.href='detalle-factura.html'">Invertir</button>
+    </div>
+
+  </section>
+
+</body>
+</html>
