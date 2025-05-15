@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvertiFácil - Tu Plataforma de Inversiones</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-icon">💰</span>
+            InvertiFácil
+        </div>
+        <nav>
+            <a href="#" class="active">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="#">Mercados</a>
+            <a href="#">Mi Cartera</a>
+            <a href="#">Inversores</a>
+            <a href="#">Aprende</a>
+        </nav>
+        <div class="user-menu">
+            <button class="btn">Invertir ahora</button>
+            <div class="user-avatar">JD</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="dashboard">
+            <div class="content">
+                <section class="panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">Tu cartera de inversiones</h2>
+                        <button class="btn" onclick="window.location.href='productos.html'">Añadir inversión</button>
+                    </div>
+                    
+                    <div class="portfolio-summary">
+                        <div class="summary-card">
+                            <div class="summary-title">Valor total</div>
+                            <div class="summary-value">$12,485.63</div>
+                            <div class="summary-change position-positive">+$345.28 (2.8%)</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-title">Rendimiento mensual</div>
+                            <div class="summary-value">+4.2%</div>
+                            <div class="summary-change">vs. 1.8% índice S&P</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-title">Rendimiento anual</div>
+                            <div class="summary-value">+11.6%</div>
+                            <div class="summary-change">vs. 8.3% índice S&P</div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-chart-container">
+                        <canvas id="portfolioPerformanceChart"></canvas>
+                    </div>
+                    
+                    <div class="tabs">
+                        <div class="tab active">Distribución</div>
+                        <div class="tab">Posiciones</div>
+                        <div class="tab">Historial</div>
+                    </div>
+                    
+                    <div class="allocation-chart-container">
+                        <div class="pie-chart-container">
+                            <canvas id="allocationChart"></canvas>
+                        </div>
+                        <div class="allocation-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgba(99, 102, 241, 0.8);"></div>
+                                <div class="legend-label">Acciones tecnológicas</div>
+                                <div class="legend-value">35%</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgba(16, 185, 129, 0.8);"></div>
+                                <div class="legend-label">ETFs</div>
+                                <div class="legend-value">25%</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgba(251, 191, 36, 0.8);"></div>
+                                <div class="legend-label">Fondos de inversión</div>
+                                <div class="legend-value">20%</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgba(239, 68, 68, 0.8);"></div>
+                                <div class="legend-label">Bonos</div>
+                                <div class="legend-value">15%</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgba(139, 92, 246, 0.8);"></div>
+                                <div class="legend-label">Otros</div>
+                                <div class="legend-value">5%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-holdings">
+                        <h3>Tus posiciones principales</h3>
+                        <table class="holdings-table">
+                            <thead>
+                                <tr>
+                                    <th>Activo</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio actual</th>
+                                    <th>Valor</th>
+                                    <th>Ganancia/Pérdida</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>AAPL</strong><br>
+                                        <span class="card-company">Apple Inc.</span>
+                                    </td>
+                                    <td>10</td>
+                                    <td>$178.42</td>
+                                    <td>$1,784.20</td>
+                                    <td class="position-positive">+$128.40 (7.2%)</td>
+                                    <td class="action-cell">
+                                        <button class="btn btn-secondary">Comprar más</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>VTI</strong><br>
+                                        <span class="card-company">Vanguard Total Stock ETF</span>
+                                    </td>
+                                    <td>15</td>
+                                    <td>$239.12</td>
+                                    <td>$3,586.80</td>
+                                    <td class="position-positive">+$215.40 (6.0%)</td>
+                                    <td class="action-cell">
+                                        <button class="btn btn-secondary">Comprar más</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>MSFT</strong><br>
+                                        <span class="card-company">Microsoft Corp.</span>
+                                    </td>
+                                    <td>8</td>
+                                    <td>$334.15</td>
+                                    <td>$2,673.20</td>
+                                    <td class="position-positive">+$246.40 (9.2%)</td>
+                                    <td class="action-cell">
+                                        <button class="btn btn-secondary">Comprar más</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>META</strong><br>
+                                        <span class="card-company">Meta Platforms Inc.</span>
+                                    </td>
+                                    <td>5</td>
+                                    <td>$475.06</td>
+                                    <td>$2,375.30</td>
+                                    <td class="position-negative">-$72.50 (-3.0%)</td>
+                                    <td class="action-cell">
+                                        <button class="btn btn-secondary">Comprar más</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <section class="panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">Productos de inversión destacados</h2>
+                        <button class="btn btn-secondary">Ver todos</button>
+                    </div>
+                    
+                    <div class="filters">
+                        <div class="filter-pill active">Todos</div>
+                        <div class="filter-pill">Acciones</div>
+                        <div class="filter-pill">ETFs</div>
+                        <div class="filter-pill">Fondos</div>
+                        <div class="filter-pill">Bonos</div>
+                        <div class="filter-pill">Criptomonedas</div>
+                    </div>
+                    
+                    <div class="investment-grid">
+                        <div class="investment-card">
+                            <div class="card-header">
+                                <div>
+                                    <div class="card-symbol">AMZN</div>
+                                    <div class="card-company">Amazon.com Inc.</div>
+                                </div>
+                                <div>
+                                    <span class="card-change positive">+2.4%</span>
+                                </div>
+                            </div>
+                            <div class="card-price">$175.35</div>
+                            <canvas class="mini-chart" data-prices="165.80,167.20,166.90,170.10,169.80,172.30,175.35"></canvas>
+                            <div class="card-footer">
+                                <span>Vol. 28.3M</span>
+                                <button class="btn">Añadir</button>
+                            </div>
+                        </div>
+                        
+                        <div class="investment-card">
+                            <div class="card-header">
+                                <div>
+                                    <div class="card-symbol">VOO</div>
+                                    <div class="card-company">Vanguard S&P 500 ETF</div>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="card-price">$452.18</div>
+                            <canvas class="mini-chart" data-prices="447.10,449.20,450.80,449.30,450.60,451.40,452.18"></canvas>
+                            <div class="card-footer">
+                                <span>Vol. 4.2M</span>
+                                <button class="btn">Añadir</button>
+                            </div>
+                        </div>
+                        
+                        <div class="investment-card">
+                            <div class="card-header">
+                                <div>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="card-price">$142.76</div>
+                            <canvas class="mini-chart" data-prices="145.20,144.80,145.60,144.20,143.90,143.10,142.76"></canvas>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                        
+                        <div class="investment-card">
+                            <div class="card-header">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">Inversores destacados</h2>
+                        <button class="btn btn-secondary">Ver todos</button>
+                    </div>
+                    
+                    <div class="top-investors">
+                        <div class="investor-card">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="sidebar">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
