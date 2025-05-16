@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Asesores Financieros - RupuX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #222;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 12px;
+      display: block;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #004a5e;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .verified {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registro de Asesores Financieros</h2>
+    <form id="registroForm">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" required>
+
+      <label for="rut">RUT</label>
+      <input type="text" id="rut" required placeholder="12.345.678-9">
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" required>
+
+      <label for="telefono">Teléfono de contacto</label>
+      <input type="tel" id="telefono">
+
+      <label for="experiencia">Resumen de experiencia</label>
+      <textarea id="experiencia" rows="4"></textarea>
+
+      <label for="certificado">Certificado CMF (.pdf)</label>
+      <input type="file" id="certificado" accept="application/pdf" required>
+
+      <button type="submit">Enviar solicitud</button>
+      <div id="resultado" class="verified" style="display: none;">✔ Asesor verificado</div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registroForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Simulación de verificación del RUT en CMF (en producción sería consulta API o scraping)
+      const rut = document.getElementById("rut").value;
+
+      if (rut === "12.345.678-9") { // ejemplo RUT válido simulado
+        document.getElementById("resultado").style.display = 'block';
+        document.getElementById("resultado").textContent = '✔ Asesor verificado en CMF';
+      } else {
+        document.getElementById("resultado").style.display = 'block';
+        document.getElementById("resultado").textContent = '✘ No verificado en CMF';
+      }
+    });
+  </script>
+</body>
+</html>

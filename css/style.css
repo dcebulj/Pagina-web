@@ -55,7 +55,7 @@ nav a {
 }
 
 .hero h2 {
-  font-size: 40px;
+  font-size: 49px;
   font-style: Roboto;
   font-weight: 700;
   color: #0053ba;
@@ -63,21 +63,44 @@ nav a {
   color: #262d31;
 }
 .categorias .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .card {
-  background: white;
-  padding: 2rem;
+  background-color: #5799c9;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 12px;
   text-align: center;
   font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 20%; /* Ajusta el ancho de las tarjetas */
+  min-width: 200px; /* Ancho mínimo para evitar que sean demasiado pequeñas */
+  max-width: 250px; /* Ancho máximo para mantener consistencia */
+  height: auto; /* Permite que el contenido ajuste la altura */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho */
 }
 
+/* Colores específicos para cada tarjeta */
+.card:nth-child(1) {
+  background-color: #62a5f196; /* Verde */
+}
+
+.card:nth-child(2) {
+  background-color: #81c2f7; /* Azul */
+}
+
+.card:nth-child(3) {
+  background-color: #9ea0f3; /* Naranja */
+}
+
+.card:nth-child(4) {
+  background-color: #8893f7; /* Morado */
+}
 .beneficios ul {
   margin-top: 1rem;
   list-style: none;
