@@ -35,8 +35,23 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
+}
+/* Cambiar el color de los enlaces de navegación */
+.nav-link {
+  color: #041636; /* Cambia el color del texto */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: color 0.3s ease; /* Agrega una transición suave al cambiar el color */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Cambia el color al pasar el cursor */
+}
+
+.nav-link.active {
+  color: #37635e; /* Color para el enlace activo */
+  font-weight: bold; /* Resalta el enlace activo */
 }
 
 .hero {
@@ -71,7 +86,7 @@ nav a {
 }
 
 .card {
-  background-color: #5799c9;
+  background-color: #23275c;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -124,6 +139,14 @@ nav a {
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.info-section .col-md-6 {
+  text-align: justify; /* Justifica el texto al lado izquierdo */
+}
+
+.info-section {
+  background-color: #ffffff; /* Fondo blanco */
 }
 
 footer {
