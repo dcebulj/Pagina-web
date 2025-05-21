@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,52 +9,10 @@ body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #f7f9fc;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem 0;
-}
-
-header {
-  background: #0a2540;
-  color: white;
-  padding: 1rem 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-/* Cambiar el color de los enlaces de navegación */
-.nav-link {
-  color: #041636; /* Cambia el color del texto */
-  text-decoration: none; /* Elimina el subrayado */
-  transition: color 0.3s ease; /* Agrega una transición suave al cambiar el color */
-}
-
-.nav-link:hover {
-  color: #007bff; /* Cambia el color al pasar el cursor */
-}
-
-.nav-link.active {
-  color: #37635e; /* Color para el enlace activo */
-  font-weight: bold; /* Resalta el enlace activo */
-}
-
+/* HERO */
 .hero {
   background: #e6f0ff;
   padding: 4rem 0;
@@ -70,85 +29,71 @@ nav a {
 }
 
 .hero h2 {
-  font-size: 49px;
-  font-style: Roboto;
-  font-weight: 700;
-  color: #0053ba;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #262d31;
 }
-.categorias .grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+.lead {
+  font-size: 1.5rem; /* Puedes aumentar este valor según lo que necesites */
+  font-weight: 400;  /* Opcional: puedes hacer el texto un poco más grueso */
 }
 
+/* TARJETAS */
 .card {
-  background-color: #23275c;
-  padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 12px;
   text-align: center;
   font-weight: bold;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 20%; /* Ajusta el ancho de las tarjetas */
-  min-width: 200px; /* Ancho mínimo para evitar que sean demasiado pequeñas */
-  max-width: 250px; /* Ancho máximo para mantener consistencia */
-  height: auto; /* Permite que el contenido ajuste la altura */
-  box-sizing: border-box; /* Incluye padding y borde en el ancho */
+  box-sizing: border-box;
+  padding: 0.75rem 1.25rem !important; /* Menos espacio interno */
+  min-height: unset;
+  height: auto;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-/* Colores específicos para cada tarjeta */
-.card:nth-child(1) {
-  background-color: #62a5f196; /* Verde */
+/* Reduce el tamaño de la imagen en la tarjeta */
+.card-img-custom {
+  width: 50px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom
 }
 
-.card:nth-child(2) {
-  background-color: #81c2f7; /* Azul */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.card:nth-child(3) {
-  background-color: #9ea0f3; /* Naranja */
+/* Colores específicos para cada tarjeta si quieres personalizar */
+.categorias .col-lg-3:nth-child(1) .card {
+  background-color: #62a5f1;
+  color: #fff;
+}
+.categorias .col-lg-3:nth-child(2) .card {
+  background-color: #81c2f7;
+  color: #fff;
+}
+.categorias .col-lg-3:nth-child(3) .card {
+  background-color: #9ea0f3;
+  color: #fff;
+}
+.categorias .col-lg-3:nth-child(4) .card {
+  background-color: #8893f7;
+  color: #fff;
 }
 
-.card:nth-child(4) {
-  background-color: #8893f7; /* Morado */
-}
-.beneficios ul {
-  margin-top: 1rem;
-  list-style: none;
-}
-
-.beneficios li {
-  margin-bottom: 0.5rem;
-}
-
-.cta {
-  text-align: center;
-  background: #f9f9f9;
-  padding: 2rem 0;
-}
-
-.cta button {
-  padding: 1rem 2rem;
-  background: #0053ba;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
+/* INFO SECTION */
 .info-section .col-md-6 {
-  text-align: justify; /* Justifica el texto al lado izquierdo */
+  text-align: justify;
 }
 
 .info-section {
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #ffffff;
 }
 
+/* FOOTER */
 footer {
   background: #0a2540;
   color: white;
@@ -161,472 +106,124 @@ footer a {
   color: #ccc;
   text-decoration: none;
 }
-.mi-portafolio {
-  background: #f4f7fa;
-  padding: 3rem 0;
-}
 
-.mi-portafolio h3 {
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #0a2540;
-}
-
-.resumen-portafolio {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 2rem;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.dato h4 {
-  font-size: 1rem;
-  color: #555;
-}
-
-.dato p {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #0a2540;
-}
-
-.grafico-placeholder {
-  text-align: center;
-  font-style: italic;
-  color: #888;
-  border: 2px dashed #ccc;
-  border-radius: 10px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
-.tarjetas-inversion {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1rem;
-}
-
-.tarjeta {
-  background: #ffffff;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-}
-
-.tarjeta h4 {
-  margin-bottom: 0.5rem;
-  color: #0053ba;
-}
-
-.tarjeta p {
-  margin: 0.3rem 0;
-  color: #333;
-}
-/* General */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f9fc;
-  color: #333;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Header */
-header {
-  background-color: #ffffff;
-  padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  text-align: center;
-}
-
-header h1 {
-  color: #2b3e50;
-  font-size: 28px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #4a4a4a;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #0077cc;
-}
-
-nav a.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Portfolio Overview */
-.portfolio-overview {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.metric {
-  flex: 1;
-  min-width: 200px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #e1e1e1;
-  text-align: center;
-}
-
-.metric h4 {
-  font-size: 16px;
-  color: #888;
-}
-
-.metric p {
-  font-size: 24px;
-  font-weight: bold;
-  color: #0077cc;
-}
-
-/* Investment Section */
-.investment-section {
-  margin-top: 20px;
-}
-
-.investment-section h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #444;
-}
-
-.investment-card {
-  background: white;
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.investment-card strong {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-/* Footer */
-footer {
-  background-color: #f1f1f1;
-  padding: 20px;
-  margin-top: 40px;
-  text-align: center;
-  color: #666;
-  font-size: 14px;
-}
-
-/* Responsive Design */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .portfolio-overview {
-    flex-direction: column;
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .info-section .col-md-6 {
+    text-align: left;
   }
 }
-/* General */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+/* ...otros estilos... */
 
-body {
-  background-color: #f9fafb;
-  color: #1f2937;
-}
-
-/* Header */
-header {
-  background-color: #ffffff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #3b82f6;
-}
-
-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-}
-
-nav a.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Main Content */
-main {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.intro {
-  margin-bottom: 2rem;
-}
-
-/* Filtros */
-.filtros {
-  margin-bottom: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-}
-
-.filtros select,
-.filtros input[type="text"] {
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  font-size: 1rem;
-}
-
-/* Product Grid */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  color: #111827;
-}
-
-.card p {
-  font-size: 0.95rem;
-  margin-bottom: 0.3rem;
-}
-
-.card .rentabilidad {
-  color: #10b981;
-  font-weight: bold;
-}
-
-/* Botones */
-.botones {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.botones a {
-  padding: 0.5rem 0.8rem;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  text-align: center;
-  transition: 0.2s;
-}
-
-.invertir {
-  background-color: #3b82f6;
-  color: white;
-}
-
-.detalle {
-  background-color: #e5e7eb;
-  color: #111827;
-}
-
-.grafico {
-  background-color: #fcd34d;
-  color: #1f2937;
-}
-
-/* Footer */
-footer {
-  margin-top: 3rem;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav a {
-    margin-left: 0.8rem;
-  }
-
-  .filtros {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-/* General */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  margin: 0;
-  padding: 20px;
-}
-
-h1 {
-  color: #6a1b9a;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Projects Container */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Card */
-.card {
-  position: relative;
-  background-color: white;
-  width: 320px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
+.img-card-wrapper {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 16px;
-}
-
-.meta {
-  font-size: 12px;
-  color: #999;
-  margin-bottom: 6px;
-}
-
-.title {
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.tags {
   display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+  justify-content: center;
 }
 
-.tag {
-  font-size: 12px;
-  padding: 2px 6px;
-  background-color: #ddd;
-  border-radius: 4px;
+.card-img-custom {
+  width: 40px;    /* Ajusta el tamaño según lo que necesites */
+  height: 40px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+  border-radius: 12px;
+}
+/* Cambia el color del texto y quita la negrita en las tarjetas */
+.card {
+  color: #222;         /* Cambia el color del texto (elige el que prefieras) */
+  font-weight: normal; /* Quita la negrita */
 }
 
-.financed {
-  font-size: 14px;
-  margin: 4px 0;
-  color: #ff6600;
-  font-weight: bold;
-}
+/* ...otros estilos... */
 
-.stats {
-  font-size: 13px;
-  margin-top: 10px;
-  line-height: 1.5;
-}
-
-/* Badge */
-.badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #e74c3c;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 13px;
-  z-index: 2;
-}
-
-/* Button */
-.btn {
-  display: block;
-  margin-top: 16px;
+/* Centra el título de la tarjeta */
+.card h5 {
   text-align: center;
-  padding: 10px;
-  background-color: #6a1b9a;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
 }
 
-.btn:hover {
-  background-color: #58147a;
+/* Justifica el texto descriptivo de la tarjeta */
+.card .card-text {
+  min-height: 80px; /* Ajusta este valor según la altura de la tarjeta más alta */
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+.empresa-img-wrapper {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: flex-end; /* Alinea la imagen al fondo del wrapper */
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.empresa-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Carrusel continuo, sin control boostrap */
+.empresa-carousel-container {
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+  max-width: 700px; /* <-- Aumenta este valor para mostrar más imágenes */
+  margin: 0 auto;
+  background-color: #fff; /* Fondo blanco para el contenedor */
+  border-radius: 5px; /* Bordes redondeados */
+  
+}
+
+.empresa-carousel-track {
+  display: flex;
+  align-items: flex-end;
+  animation: scroll-logos 14s linear infinite;
+}
+
+.empresa-carousel-img {
+  width: 120px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 5px;
+  display: block;
+}
+
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.empresa-carousel-container {
+  position: relative;
+  background: #fff;
+  /* ...otros estilos... */
+}
+
+.empresa-carousel-container::before,
+.empresa-carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.empresa-carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, #e6f0ff 80%, transparent 100%);
+}
+
+.empresa-carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, #e6f0ff 80%, transparent 100%);
+}
+

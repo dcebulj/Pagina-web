@@ -9,14 +9,35 @@
 </head>
 <body>
   <header>
-    <div class="logo">RupuX</div>
-    <nav>
-      <a href="index.html"><strong>Inicio</strong></a>
-      <a href="inmobiliaria.html">Inmobiliario</a>
-      <a href="facturas.html">Factoring</a>
-      <a href="portafolio.html">Mi Portafolio</a>
-      <a href="etf.html">ETFs</a>
-      <a href="#">Contacto</a>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: #0a2540;">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">RupuX</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html"><strong>Inicio</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inmobiliaria.html">Inmobiliario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="facturas.html">Factoring</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portafolio.html">Mi Portafolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="etf.html">ETFs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -25,59 +46,61 @@
       <h2 class="mb-4">Invierte en diferentes productos financieros y diversifica con confianza.</h2>
       <p class="lead">Encuentra las mejores oportunidades de inversión en un solo lugar.</p>
     </div>
-  <section class="categorias py-5">
-  <div class="container">
-    <div class="row g-4 justify-content-center">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <a href="etf.html" class="card text-center text-white bg-primary p-3">
-          <h5>Fondos de inversión</h5>
-        </a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <a href="inmobiliaria.html" class="card text-center text-white bg-info p-3">
-          <h5>Proyectos Inmobiliarios</h5>
-        </a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <a href="facturas.html" class="card text-center text-white bg-primary p-3">
-          <h5>Financia Facturas</h5>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Nueva sección -->
-<section class="info-section py-5">
+  <section class="categorias py-5">
     <div class="container">
-        <div class="row align-items-center">
-            <!-- Columna de texto -->
-            <div class="col-md-6">
-                <h3 class="mb-4">¿Cómo te ayudamos?</h3>
-                <div class="mb-3">
-                    <h5>Descubre y compara</h5>
-                    <p>Consigue en un solo lugar todas la información de las mejores oportunidades de inversion y productos financieros.</p>
-                </div>
-                <div class="mb-3">
-                    <h5>Transparencia en la información</h5>
-                    <p>Te guiamos de forma imparcial y te damos la información sin letra chica.</p>
-                </div>
-                <div class="mb-3">
-                    <h5>Elige y diversifica</h5>
-                    <p>Selecciona lo que te interesa y diversifica tus inversiones.</p>
-                </div>
-                <div class="mb-3">
-                    <h5>Si aun tienes dudas</h5>
-                    <p>Contacta a asesores certificados por la CMF, quienes estarán disponibles para ayduarte.</p>
-                </div>
-            </div>
-            <!-- Columna de imagen -->
-            <div class="col-md-6 text-center">
-                <img src="https://via.placeholder.com/500x300" alt="Información visual" class="img-fluid rounded">
-            </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <a href="etf.html" class="card text-center text-white bg-primary p-3 h-100">
+            <h5>Fondos de inversión</h5>
+          </a>
         </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <a href="inmobiliaria.html" class="card text-center text-white bg-info p-3 h-100">
+            <h5>Proyectos Inmobiliarios</h5>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <a href="facturas.html" class="card text-center text-white bg-primary p-3 h-100">
+            <h5>Financia Facturas</h5>
+          </a>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <!-- Nueva sección -->
+  <section class="info-section py-5" style="background: #fff;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Columna de texto -->
+        <div class="col-12 col-md-6 mb-4 mb-md-0" style="text-align: justify;">
+          <h3 class="mb-4">¿Cómo te ayudamos?</h3>
+          <div class="mb-3">
+            <h5>Descubre y compara</h5>
+            <p>Consigue en un solo lugar todas la información de las mejores oportunidades de inversion y productos financieros.</p>
+          </div>
+          <div class="mb-3">
+            <h5>Transparencia en la información</h5>
+            <p>Te guiamos de forma imparcial y te damos la información sin letra chica.</p>
+          </div>
+          <div class="mb-3">
+            <h5>Elige y diversifica</h5>
+            <p>Selecciona lo que te interesa y diversifica tus inversiones.</p>
+          </div>
+          <div class="mb-3">
+            <h5>Si aun tienes dudas</h5>
+            <p>Contacta a asesores certificados por la CMF, quienes estarán disponibles para ayudarte.</p>
+          </div>
+        </div>
+        <!-- Columna de imagen -->
+        <div class="col-12 col-md-6 text-center">
+          <img src="https://via.placeholder.com/500x300" alt="Información visual" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="py-4 bg-dark text-white">
     <div class="container text-center">
@@ -88,4 +111,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
