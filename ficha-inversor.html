@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha del Inversor | RupuX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      color: #1b1b1b;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 2rem;
+      background-color: #0057ff;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0040c1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ficha del Inversor - RupuX</h1>
+  <form id="investor-form">
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" required>
+
+    <label for="rut">RUT</label>
+    <input type="text" id="rut" required>
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" required>
+
+    <label for="telefono">Teléfono</label>
+    <input type="text" id="telefono">
+
+    <label for="direccion">Dirección</label>
+    <input type="text" id="direccion">
+
+    <label for="nivel">Nivel de ingresos mensual</label>
+    <select id="nivel">
+      <option value="">Seleccione</option>
+      <option value="menos_1m">Menos de $1.000.000</option>
+      <option value="1m_3m">$1.000.000 - $3.000.000</option>
+      <option value="mas_3m">Más de $3.000.000</option>
+    </select>
+
+    <label for="objetivo">Objetivo de inversión</label>
+    <select id="objetivo">
+      <option value="">Seleccione</option>
+      <option value="ahorro">Ahorro</option>
+      <option value="retorno">Rentabilidad</option>
+      <option value="retiro">Retiro / jubilación</option>
+    </select>
+
+    <button type="submit">Guardar y continuar</button>
+  </form>
+
+  <script>
+    document.getElementById('investor-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Tus datos se han guardado de forma local.\nPuedes usarlos para agilizar tu registro en Fintual.");
+      window.open("https://fintual.cl", "_blank");
+    });
+  </script>
+</body>
+</html>

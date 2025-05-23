@@ -59,7 +59,7 @@ body {
   height: 60px;
   object-fit: contain;
   border-radius: 12px;
-  margin-bottom
+  margin-bottom: 0.5rem;
 }
 
 .card:hover {
@@ -120,15 +120,15 @@ footer a {
 /* ...otros estilos... */
 
 .img-card-wrapper {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center /* Alinea la imagen al fondo del wrapper */
 }
 
 .card-img-custom {
-  width: 40px;    /* Ajusta el tamaño según lo que necesites */
-  height: 40px;
+  width: 50px;    /* Ajusta el tamaño según lo que necesites */
+  height: 50px;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
   object-fit: contain;
@@ -153,6 +153,7 @@ footer a {
   text-align: justify;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
