@@ -34,8 +34,8 @@ body {
   color: #262d31;
 }
 .lead {
-  font-size: 1.5rem; /* Puedes aumentar este valor según lo que necesites */
-  font-weight: 400;  /* Opcional: puedes hacer el texto un poco más grueso */
+  font-size: 20px; /* Puedes aumentar este valor según lo que necesites */
+  font-weight:400;  /* Opcional: puedes hacer el texto un poco más grueso */
 }
 
 /* TARJETAS */
