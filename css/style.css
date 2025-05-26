@@ -1,4 +1,4 @@
-/* Reset básico */
+/* RESET BÁSICO */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,12 +33,13 @@ body {
   font-weight: bold;
   color: #262d31;
 }
+
 .lead {
-  font-size: 20px; /* Puedes aumentar este valor según lo que necesites */
-  font-weight:400;  /* Opcional: puedes hacer el texto un poco más grueso */
+  font-size: 20px;
+  font-weight: 400;
 }
 
-/* TARJETAS */
+/* TARJETAS GENERALES */
 .card {
   border-radius: 12px;
   text-align: center;
@@ -55,11 +56,13 @@ body {
   width: 100%;
   min-width: 0;
   max-width: 100%;
-}
-/* Evita que la badge se desborde de la tarjeta */
-.card {
   position: relative;
-  overflow: hidden; /* Asegura que nada se salga de la tarjeta */
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .badge {
@@ -69,10 +72,71 @@ body {
   text-overflow: ellipsis;
   right: 8px;
   top: 8px;
+  position: absolute;
 }
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+/* Imagen de portada de tarjeta grande */
+.card > img:not(.card-img-custom) {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 8px;
+}
+
+/* Imagen pequeña para tarjetas de categorías */
+.card-img-custom {
+  width: 50px !important;
+  height: 50px !important;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Tarjetas de categorías (index) */
+.categorias .card .d-flex {
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 8px;
+}
+
+.categorias .card h5 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Card content y textos */
+.card-content {
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tags, .financed, .stats, .meta, .title {
+  text-align: justify;
+}
+
+.card h5 {
+  text-align: center;
+}
+
+.card .card-text {
+  min-height: 80px;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 3 tarjetas por fila SIEMPRE, incluso en móvil */
@@ -83,42 +147,15 @@ body {
   padding-right: 4px;
 }
 
-/* Ajuste de padding para contenido de la tarjeta en móvil */
-@media (max-width: 600px) {
-  .card-content {
-    padding: 10px 2px 10px 2px;
-  }
-  .card {
-    padding: 0.5rem 0.2rem !important;
-  }
-}
-
-/* Colores específicos para cada tarjeta si quieres personalizar */
-.categorias .col-lg-3:nth-child(1) .card {
-  background-color: #62a5f1;
-  color: #fff;
-}
-.categorias .col-lg-3:nth-child(2) .card {
-  background-color: #81c2f7;
-  color: #fff;
-}
-.categorias .col-lg-3:nth-child(3) .card {
-  background-color: #9ea0f3;
-  color: #fff;
-}
-.categorias .col-lg-3:nth-child(4) .card {
-  background-color: #8893f7;
-  color: #fff;
-}
+/* Colores específicos para cada tarjeta de categorías */
+.categorias .col-lg-3:nth-child(1) .card { background-color: #62a5f1; color: #fff; }
+.categorias .col-lg-3:nth-child(2) .card { background-color: #81c2f7; color: #fff; }
+.categorias .col-lg-3:nth-child(3) .card { background-color: #9ea0f3; color: #fff; }
+.categorias .col-lg-3:nth-child(4) .card { background-color: #8893f7; color: #fff; }
 
 /* INFO SECTION */
-.info-section .col-md-6 {
-  text-align: justify;
-}
-
-.info-section {
-  background-color: #ffffff;
-}
+.info-section .col-md-6 { text-align: justify; }
+.info-section { background-color: #ffffff; }
 
 /* FOOTER */
 footer {
@@ -128,103 +165,40 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
-
 footer a {
   color: #ccc;
   text-decoration: none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-  .info-section .col-md-6 {
-    text-align: left;
-  }
-}
-/* ...otros estilos... */
-
-.img-card-wrapper {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center /* Alinea la imagen al fondo del wrapper */
-}
-
-.card img {
-  width: 100%;
-  height: 110px;         /* Reduce el alto de la imagen */
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
-  margin-bottom: 8px;
-}
-/* Cambia el color del texto y quita la negrita en las tarjetas */
-.card {
-  color: #222;         /* Cambia el color del texto (elige el que prefieras) */
-  font-weight: normal; /* Quita la negrita */
-}
-.card-content {
-  text-align: justify;   /* Justifica todo el texto dentro de la tarjeta */
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.tags, .financed, .stats, .meta, .title {
-  text-align: justify;   /* Justifica también estos bloques si es necesario */
-}
-/* ...otros estilos... */
-
-/* Centra el título de la tarjeta */
-.card h5 {
-  text-align: center;
-}
-
-/* Justifica el texto descriptivo de la tarjeta */
-.card .card-text {
-  min-height: 80px; /* Ajusta este valor según la altura de la tarjeta más alta */
-  text-align: justify;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+/* EMPRESAS Y CARRUSEL */
 .empresa-img-wrapper {
   width: 120px;
   height: 60px;
   display: flex;
-  align-items: flex-end; /* Alinea la imagen al fondo del wrapper */
+  align-items: flex-end;
   justify-content: center;
   margin: 0 auto;
 }
-
 .empresa-img {
   height: 50px;
   width: auto;
   object-fit: contain;
   display: block;
 }
-
-/* Carrusel continuo, sin control boostrap */
 .empresa-carousel-container {
   height: 70px;
   overflow: hidden;
   position: relative;
-  max-width: 700px; /* <-- Aumenta este valor para mostrar más imágenes */
+  max-width: 700px;
   margin: 0 auto;
-  background-color: #fff; /* Fondo blanco para el contenedor */
-  border-radius: 5px; /* Bordes redondeados */
-  
+  background-color: #fff;
+  border-radius: 5px;
 }
-
 .empresa-carousel-track {
   display: flex;
   align-items: flex-end;
   animation: scroll-logos 14s linear infinite;
 }
-
 .empresa-carousel-img {
   width: 120px;
   height: 60px;
@@ -232,17 +206,10 @@ footer a {
   margin: 0 5px;
   display: block;
 }
-
 @keyframes scroll-logos {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-.empresa-carousel-container {
-  position: relative;
-  background: #fff;
-  /* ...otros estilos... */
-}
-
 .empresa-carousel-container::before,
 .empresa-carousel-container::after {
   content: "";
@@ -253,64 +220,37 @@ footer a {
   z-index: 2;
   pointer-events: none;
 }
-
 .empresa-carousel-container::before {
   left: 0;
   background: linear-gradient(to right, #e6f0ff 80%, transparent 100%);
 }
-
 .empresa-carousel-container::after {
   right: 0;
   background: linear-gradient(to left, #e6f0ff 80%, transparent 100%);
 }
 
-/* ...existing code... */
-
-/* Justifica y ajusta los textos de stats en las tarjetas */
-/* ...existing code... */
-
-/* Justifica y ajusta los textos de stats en las tarjetas */
+/* STATS DE TARJETAS */
 .stats .row.text-center {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 0;
 }
-
 .stats .col-4 {
   flex: 1 1 0;
   min-width: 0;
   padding: 0 2px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;      /* Centra los valores por defecto */
+  align-items: center;
   justify-content: flex-end;
   text-align: center;
 }
-
 /* Solo para el valor de riesgo: alinear a la izquierda */
 .stats .col-4 .riesgo-iconos {
   align-self: flex-start;
   text-align: left;
 }
-
-/* Ajusta el tamaño de texto y los íconos en pantallas pequeñas */
-@media (max-width: 600px) {
-  .stats .col-4 div {
-    font-size: 11px !important;
-  }
-  .stats .col-4 {
-    padding: 0 1px;
-  }
-  .stats .row.text-center {
-    gap: 0;
-  }
-  .riesgo-iconos {
-    font-size: min(4vw, 12px);
-    letter-spacing: -1px;
-  }
-}
-
 .riesgo-iconos {
   font-size: 10px;
   color: #ff9800;
@@ -322,9 +262,16 @@ footer a {
   text-overflow: ellipsis;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h2 { font-size: 1.5rem; }
+  .info-section .col-md-6 { text-align: left; }
+}
 @media (max-width: 600px) {
-  .riesgo-iconos {
-    font-size: min(4vw, 12px); /* Escala el tamaño pero nunca mayor a 12px */
-    letter-spacing: -1px;      /* Reduce el espacio entre íconos si es necesario */
-  }
+  .card-content { padding: 10px 2px 10px 2px; }
+  .card { padding: 0.5rem 0.2rem !important; }
+  .stats .col-4 div { font-size: 11px !important; }
+  .stats .col-4 { padding: 0 1px; }
+  .stats .row.text-center { gap: 0; }
+  .riesgo-iconos { font-size: min(4vw, 12px); letter-spacing: -1px; }
 }
