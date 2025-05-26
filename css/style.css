@@ -88,7 +88,7 @@ body {
 .card-img-custom {
   width: 50px !important;
   height: 50px !important;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 0;
   margin-right: 8px;
