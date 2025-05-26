@@ -42,29 +42,55 @@ body {
 .card {
   border-radius: 12px;
   text-align: center;
-  font-weight: bold;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
-  padding: 0.75rem 1.25rem !important; /* Menos espacio interno */
+  padding: 0.75rem 0.5rem !important;
   min-height: unset;
   height: auto;
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.75rem;
+  color: #222;
+  font-weight: normal;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+/* Evita que la badge se desborde de la tarjeta */
+.card {
+  position: relative;
+  overflow: hidden; /* Asegura que nada se salga de la tarjeta */
 }
 
-/* Reduce el tamaño de la imagen en la tarjeta */
-.card-img-custom {
-  width: 50px;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 12px;
-  margin-bottom: 0.5rem;
+.badge {
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  right: 8px;
+  top: 8px;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 3 tarjetas por fila SIEMPRE, incluso en móvil */
+.row > .col-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* Ajuste de padding para contenido de la tarjeta en móvil */
+@media (max-width: 600px) {
+  .card-content {
+    padding: 10px 2px 10px 2px;
+  }
+  .card {
+    padding: 0.5rem 0.2rem !important;
+  }
 }
 
 /* Colores específicos para cada tarjeta si quieres personalizar */
@@ -126,20 +152,27 @@ footer a {
   align-items: center /* Alinea la imagen al fondo del wrapper */
 }
 
-.card-img-custom {
-  width: 50px;    /* Ajusta el tamaño según lo que necesites */
-  height: 50px;
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
-  object-fit: contain;
-  border-radius: 12px;
+.card img {
+  width: 100%;
+  height: 110px;         /* Reduce el alto de la imagen */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 8px;
 }
 /* Cambia el color del texto y quita la negrita en las tarjetas */
 .card {
   color: #222;         /* Cambia el color del texto (elige el que prefieras) */
   font-weight: normal; /* Quita la negrita */
 }
+.card-content {
+  text-align: justify;   /* Justifica todo el texto dentro de la tarjeta */
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
+.tags, .financed, .stats, .meta, .title {
+  text-align: justify;   /* Justifica también estos bloques si es necesario */
+}
 /* ...otros estilos... */
 
 /* Centra el título de la tarjeta */
@@ -231,3 +264,67 @@ footer a {
   background: linear-gradient(to left, #e6f0ff 80%, transparent 100%);
 }
 
+/* ...existing code... */
+
+/* Justifica y ajusta los textos de stats en las tarjetas */
+/* ...existing code... */
+
+/* Justifica y ajusta los textos de stats en las tarjetas */
+.stats .row.text-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.stats .col-4 {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;      /* Centra los valores por defecto */
+  justify-content: flex-end;
+  text-align: center;
+}
+
+/* Solo para el valor de riesgo: alinear a la izquierda */
+.stats .col-4 .riesgo-iconos {
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Ajusta el tamaño de texto y los íconos en pantallas pequeñas */
+@media (max-width: 600px) {
+  .stats .col-4 div {
+    font-size: 11px !important;
+  }
+  .stats .col-4 {
+    padding: 0 1px;
+  }
+  .stats .row.text-center {
+    gap: 0;
+  }
+  .riesgo-iconos {
+    font-size: min(4vw, 12px);
+    letter-spacing: -1px;
+  }
+}
+
+.riesgo-iconos {
+  font-size: 10px;
+  color: #ff9800;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+  .riesgo-iconos {
+    font-size: min(4vw, 12px); /* Escala el tamaño pero nunca mayor a 12px */
+    letter-spacing: -1px;      /* Reduce el espacio entre íconos si es necesario */
+  }
+}
