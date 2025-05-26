@@ -87,6 +87,17 @@
       padding: 0.6rem 1rem;
       border-radius: 6px;
       text-decoration: none;
+      margin-left: 0.5rem;
+    }
+
+    .valor-asesor {
+      background:#e6f0ff;
+      color:#0A2540;
+      border-radius:5px;
+      padding:3px 10px;
+      font-size:0.98rem;
+      margin-right: 0.5rem;
+      display: inline-block;
     }
 
     @media(max-width: 768px) {
@@ -122,7 +133,16 @@
       <div class="certificado">Certificado por CMF</div>
       <div class="estrellas">★★★★★</div>
       <div class="resumen">10 años de experiencia asesorando en inversiones inmobiliarias y ETFs. Ha trabajado con bancos y fondos de inversión.</div>
-      <a class="btn-agendar" href="#">Agendar cita</a>
+      <div style="display:flex; align-items:center; justify-content:center; gap:6px; margin-bottom:0.7rem;">
+        <span title="Asesor destacado" style="font-size:1.3rem;">🏅</span>
+        <span style="font-size:0.98rem; color:#0A2540;">
+          Servicios prestados <span id="contador-juan">0</span>
+        </span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:0.7rem;">
+        <span id="valor-juan" class="valor-asesor">$25.000 por sesión</span>
+        <a class="btn-agendar" href="#" onclick="incrementarContador('contador-juan'); return false;">Agendar cita</a>
+      </div>
     </div>
 
     <!-- Asesor 2 -->
@@ -132,10 +152,40 @@
       <div class="certificado">CMF y CFA Level 1</div>
       <div class="estrellas">★★★★☆</div>
       <div class="resumen">Especialista en portafolios diversificados y planificación financiera personal. Atención personalizada por Zoom o llamada.</div>
-      <a class="btn-agendar" href="#">Agendar cita</a>
+      <div style="display:flex; align-items:center; justify-content:center; gap:6px; margin-bottom:0.7rem;">
+        <span title="Asesora destacada" style="font-size:1.3rem;">🏅</span>
+        <span style="font-size:0.98rem; color:#0A2540;">
+          Contactada <span id="contador-maria">0</span>
+        </span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:0.7rem;">
+        <span id="valor-maria" class="valor-asesor">Valores a convenir</span>
+        <a class="btn-agendar" href="#" onclick="incrementarContador('contador-maria'); return false;">Agendar cita</a>
+      </div>
     </div>
 
   </div>
+
+  <script>
+    function incrementarContador(id) {
+      var el = document.getElementById(id);
+      el.textContent = parseInt(el.textContent, 10) + 1;
+    }
+
+    // Si el asesor no ingresa valor, dejar "Valores a convenir"
+    function setValorAsesor(idSpan, valor) {
+      var el = document.getElementById(idSpan);
+      if (!valor || valor.trim() === "") {
+        el.textContent = "Valores a convenir";
+      } else {
+        el.textContent = valor;
+      }
+    }
+
+    // Ejemplo de uso:
+    // setValorAsesor('valor-juan', ''); // Dejaría "Valores a convenir"
+    // setValorAsesor('valor-maria', '$30.000 por sesión');
+  </script>
 
 </body>
 </html>
