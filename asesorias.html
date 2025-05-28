@@ -87,35 +87,40 @@
       display: inline-block;
       text-align: left;
     }
-    @media(max-width: 768px) {
-      .grid-asesores {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-    @media (max-width: 600px) {
-      .tarjeta-asesor {
-        font-size: 0.95rem;
-      }
-      .asesor-foto {
-        width: 54px;
-        height: 54px;
-      }
-      .nombre-asesor {
-        font-size: 1.05rem;
-      }
-      .resumen,
-      .certificado {
-        font-size: 0.85rem;
-      }
-      .valor-asesor {
-        font-size: 0.7rem;
-      }
-      .btn-agendar {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.6rem;
-      }
-    }
+   @media (max-width: 600px) {
+  .tarjeta-asesor {
+    font-size: 0.95rem;
+  }
+  .asesor-foto {
+    width: 54px;
+    height: 54px;
+  }
+  .nombre-asesor {
+    font-size: 1.05rem;
+  }
+  .resumen,
+  .certificado {
+    font-size: 0.85rem;
+  }
+  .valor-asesor {
+    font-size: 0.7rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .btn-agendar {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  /* Ajusta el contenedor para que no se justifique y sea compacto */
+  .tarjeta-asesor > div[style*="display:flex"][style*="gap:8px"] {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    flex-wrap: nowrap !important;
+    gap: 4px !important;
+  }
+}
   </style>
 </head>
 <body>
