@@ -297,3 +297,10 @@ footer a {
     height: 120px !important;
   }
 }
+
+@media (max-width: 600px) {
+  /* Reduce el alto de las imágenes de tarjetas en el Index */
+  .card > img:not(.card-img-custom) {
+    height: 80px !important;
+  }
+}
