@@ -294,3 +294,15 @@ footer a {
     padding: 0.5rem 0.8rem;
   }
 }
+.card img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: contain !important;
+  background: #f7f9fc;
+  display: block;
+}
+@media (max-width: 600px) {
+  .card img {
+    height: 120px !important;
+  }
+}
